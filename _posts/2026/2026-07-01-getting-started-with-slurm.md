@@ -8,7 +8,6 @@ categories:
   - technical-articles
 tags:
   - slurm
-  - tutorial
   - hpc
 description: SLURM is the job scheduler running on most HPC clusters today. Here are the commands and habits that get you productive quickly as an end-user, without having to read the entire manual first.
 toc: false
