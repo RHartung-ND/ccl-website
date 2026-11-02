@@ -11,6 +11,9 @@ children:
   - title: Workshops
     permalink: /workshops/
   - title: divider
+  - title: Tutorials
+    permalink: /tutorials/
+  - title: divider
   - title: Highlights
     permalink: /highlights/
   - title: divider
