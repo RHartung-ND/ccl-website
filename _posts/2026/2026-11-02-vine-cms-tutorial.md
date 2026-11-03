@@ -30,16 +30,17 @@ Built on years of experience scaling data analysis software for the CMS experime
 
 On **November 12th and 13th**, the Cooperative Computing Lab (CCL) is hosting a hands-on Tutorial & Hackathon tailored for Notre Dame CMS graduate students, postdocs, and faculty.
 
-### Schedule
-* **Thursday, November 12**, 10:00 AM–1:00 PM: Tutorial
-* **Friday, November 13**, 2:00–5:00 PM: Hackathon
+# Schedule
+Both days include the Tutorial & Hackathon.
+* **Thursday, November 12**, 10:00 AM–1:00 PM
+* **Friday, November 13**, 2:00–5:00 PM
 
 **Location:** Nieuwland Science Hall, University of Notre Dame (room TBA). Remote participation will also be supported.
 
 ### Who Should Attend
 Anyone comfortable with a terminal, Python, and a text editor. No prior experience with TaskVine, coffea, or HTCondor is needed.
 
-### Tutorial (Thursday)
+# Tutorial
 You'll take a real CMS analysis from a single process on a login node, to a TaskVine worker on the same machine, and finally to a full HTCondor pool, all without changing your processor code. Along the way, you'll learn how to:
 
 * Run the same analysis locally, on a local TaskVine worker, and on an HTCondor pool
@@ -54,7 +55,7 @@ The analysis is written in both **coffea** and **ROOT's RDataFrame**, and you pi
 
 All exercises use real CMS Open Data from `Run2012B_SingleMu`, the input to the IRIS-HEP ADL benchmarks: 15 ROOT files and about 3.7 million events.
 
-### Hackathon (Friday)
+# Hackathon
 Bring your own analysis code! Adapt and scale your workflows with direct support from the CCL team.
 
 ### Before the Session
@@ -65,6 +66,6 @@ Please complete these steps ahead of time. They won't be covered live, and build
 * Clone the repository and build its environment by following **[Module 1: Setup](https://github.com/cooperative-computing-lab/vine-cms-analysis-stack-tutorials/blob/main/docs/module-01-setup.md)**.
 * Pick an analysis flavor: coffea or RDataFrame.
 
-### Resources & Registration
+# Resources & Registration
 * **[Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSff3qqeQGoNlCk39xcAPiwt9AUVlT7ee2qBK0Mscx-Ix2IItg/viewform?usp=publish-editor):** Please register in advance to reserve your spot.
 * **[Tutorial Repository](https://github.com/cooperative-computing-lab/vine-cms-analysis-stack-tutorials):** Tutorials and codebase.

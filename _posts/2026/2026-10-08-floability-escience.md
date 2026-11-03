@@ -10,6 +10,7 @@ categories:
 tags:
   - floability
   - notebooks
+  - tutorial
   - hpc
   - data-portability
   - backpacks
@@ -73,3 +74,4 @@ By taking data movement and staging logic out of individual notebook cells, Saif
 - **Paper PDF:** [Declare, Resolve, Reuse: A Portable Data Layer for Notebook Workflows Across HPC Systems](/assets/paper/pdf/floability-escience-2026.pdf)
 - **Project Website:** [floability.github.io](https://floability.github.io)
 - **Artifacts & Benchmarks:** [GitHub Repository](https://github.com/saifulislampi/floability-data-experiments)
+- **Live Presentation:** [Click here to watch the YouTube video](https://www.youtube.com/watch?v=zDqGd6WWoqU) 
