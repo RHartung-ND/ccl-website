@@ -35,7 +35,7 @@ Both days include the Tutorial & Hackathon.
 * **Thursday, November 12**, 10:00 AM–1:00 PM
 * **Friday, November 13**, 2:00–5:00 PM
 
-**Location:** Nieuwland Science Hall, University of Notre Dame (room TBA). Remote participation will also be supported.
+**Location:** Nieuwland Science Hall, University of Notre Dame Room 415. Remote participation will also be supported.
 
 ### Who Should Attend
 Anyone comfortable with a terminal, Python, and a text editor. No prior experience with TaskVine, coffea, or HTCondor is needed.
