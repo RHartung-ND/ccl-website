@@ -6,6 +6,7 @@
   - more_url: Optional link target for "See more"
   - more_label: Optional label for the link (default: See more)
   - featured_only: If true, only include items with carousel: true (default: true)
+  - title_with_description: If true, place the title above the description beside the image
 {% endcomment %}
 
 
@@ -40,6 +41,12 @@
 {%- assign _show_title = false -%}
 {%- if _show_title_param == 'true' or _show_title_param == true or _show_title_param == '1' or _show_title_param == 'yes' -%}
   {%- assign _show_title = true -%}
+{%- endif -%}
+
+{%- assign _title_with_description_param = include.title_with_description | default: 'false' | downcase -%}
+{%- assign _title_with_description = false -%}
+{%- if _title_with_description_param == 'true' or _title_with_description_param == true or _title_with_description_param == '1' or _title_with_description_param == 'yes' -%}
+  {%- assign _title_with_description = true -%}
 {%- endif -%}
 
 {%- assign _large_icon_param = include.large_icon | default: 'false' | downcase -%}
@@ -98,7 +105,7 @@
             {% endif %}
             <a href="{{ dest }}" class="text-decoration-none d-block"{% if is_external %} target="_blank" rel="noopener noreferrer"{% endif %}>
 
-              {% if _show_title and item.title %}
+              {% if _show_title and item.title and _title_with_description == false %}
               <h5 class="thumb-list-title mb-2">{{ item.title }}</h5>
               {% endif %}
 
@@ -113,6 +120,10 @@
               {%- elsif item.description -%}
                 {%- assign desc_text = item.description -%}
               {%- endif -%}
+              {%- assign _show_inline_title = false -%}
+              {%- if _show_title and _title_with_description and item.title -%}
+                {%- assign _show_inline_title = true -%}
+              {%- endif -%}
 
               {% if _large_icon %}
                 <div class="thumb-list-content large-icon-mode d-flex flex-column flex-md-row" style="gap:0.75rem;{% unless _is_compact %} padding-top: 0.75rem;{% endunless %}">
@@ -123,9 +134,14 @@
                     </div>
                   {% endif %}
 
-                  {% if desc_text %}
+                  {% if _show_inline_title or desc_text %}
                     <div style="flex: 1 1 0; min-width: 0; line-height: 1.5;">
-                      <p class="thumb-list-desc mb-0">{{ desc_text }}</p>
+                      {% if _show_inline_title %}
+                        <h5 class="thumb-list-title mb-2">{{ item.title }}</h5>
+                      {% endif %}
+                      {% if desc_text %}
+                        <p class="thumb-list-desc mb-0">{{ desc_text }}</p>
+                      {% endif %}
                     </div>
                   {% endif %}
                 </div>
@@ -137,8 +153,15 @@
                       <img src="{{ item_image | relative_url }}" alt="{{ item.title }}" class="img-fluid rounded">
                     </div>
                   {% endif %}
-                  {% if desc_text %}
-                    <p class="thumb-list-desc mb-0">{{ desc_text }}</p>
+                  {% if _show_inline_title or desc_text %}
+                    <div>
+                      {% if _show_inline_title %}
+                        <h5 class="thumb-list-title mb-2">{{ item.title }}</h5>
+                      {% endif %}
+                      {% if desc_text %}
+                        <p class="thumb-list-desc mb-0">{{ desc_text }}</p>
+                      {% endif %}
+                    </div>
                   {% endif %}
                 </div>
               {% endif %}
