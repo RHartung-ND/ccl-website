@@ -10,7 +10,6 @@ categories:
 tags:
   - floability
   - notebooks
-  - tutorial
   - hpc
   - data-portability
   - backpacks
